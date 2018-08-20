@@ -1,0 +1,33 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    //gradle sdk
+    compile gradleApi()
+    //groovy sdk
+    compile localGroovy()
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+group='cc.cyning.plugin'
+version='1.0.2'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //提交到远程服务器：
+            // repository(url: "http://www.xxx.com/repos") {
+            //    authentication(userName: "admin", password: "admin")
+            // }
+            //本地的Maven地址设置为D:/repos
+//            repository(url: uri('/Users/lixingyun/work/study/gradle-plugin/LearningGrale/maven'))
+            repository(url: "file://${rootProject.projectDir}/maven")
+
+        }
+    }
+}
+
