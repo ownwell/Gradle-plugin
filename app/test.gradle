@@ -1,0 +1,34 @@
+////import cc.cyning.plugin.FirstTask
+////
+//apply plugin: 'cc.cyning.plugin.FirstPlugin'
+cyMessage {
+    message = 'hello '
+    greeter = 'cyning'
+}
+
+task hello1 << {
+    println 'hello1'
+}
+
+task hello2 {
+    doLast {
+        println 'hello2'}
+}
+
+task hello3 {
+    println "task ----"
+}
+
+//
+hello3.leftShift {
+    print("hello world 3")
+}
+
+
+// hello使用了默认的message值
+task task1(type:FirstTask)
+
+// 重新设置了message的值
+task task2(type:FirstTask){
+    message ="I am an android developer"
+}
