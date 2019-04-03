@@ -20,6 +20,5 @@ public class MainActivity extends AppCompatActivity {
     @Cy(id = 2019, msg = "xiuqi")
     protected void test() {
         Test mTest = new Test();
-        System.out.println(mTest.add(1, 8));
     }
 }

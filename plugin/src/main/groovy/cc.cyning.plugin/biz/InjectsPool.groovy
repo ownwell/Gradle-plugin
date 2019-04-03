@@ -74,7 +74,7 @@ public class InjectsPool {
                         String body = "{" +
                                 "final long endMs = System.currentTimeMillis();" +
 
-                                "System.out.println(\"Executed in ms: [" +className + ","+mMethod.getName() +
+                                "System.out.println(\"Executed in ms: [" + className + "," + mMethod.getName() +
                                 "] ---> \" + (endMs-startMs));}"
 
 
@@ -86,8 +86,8 @@ public class InjectsPool {
                                 .getAttribute(AnnotationsAttribute.visibleTag);
                         System.out.println('attribute = ' + attribute)
                         if (attribute != null) {
-                            Annotation[] anns= attribute.getAnnotations()
-                            for(Annotation ann:anns) {
+                            Annotation[] anns = attribute.getAnnotations()
+                            for (Annotation ann : anns) {
                                 System.out.println(ann.getTypeName());
                                 System.out.println(ann.getMemberValue('id'));
                                 System.out.println(ann.getMemberValue('msg'));
@@ -101,9 +101,6 @@ public class InjectsPool {
 //                            String name = a.msg()
 //                            System.out.println("id: " + id + ", name: " + name);
 //                        }
-
-
-
 
 //                             ;  
 //                             //获取注解 
