@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'cyning'
+apply plugin: 'ben_asm'
 
 
 
@@ -8,11 +8,12 @@ apply plugin: 'cyning'
 //    greeter = 'cyning'
 //}
 android {
-    compileSdkVersion 27
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "cc.cyning.learninggrale"
-        minSdkVersion 15
-        targetSdkVersion 27
+        minSdkVersion 19
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -33,11 +34,11 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(':libUitls')
 }
 
@@ -52,10 +53,10 @@ buildscript {
 
         }
     }
-    dependencies {
-        //格式为-->group:module:version
-        classpath 'cc.cyning.plugin:plugin:1.0.3'
-    }
+//    dependencies {
+//        //格式为-->group:module:version
+//        classpath 'cc.cyning.plugin:plugin:1.0.3'
+//    }
 }
 
 //cyning为resources/META-INF/gradle-plugins

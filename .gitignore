@@ -103,4 +103,7 @@ fastlane/readme.md
 hs_err_pid*
 
 maven
-.idea/vcs.xml
+.idea/vcs.xmlworkspace
+.project
+.classpath
+workspace
