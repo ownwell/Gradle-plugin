@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
-apply plugin: 'ben_asm_fast_click'
-//apply plugin: 'task_cost'
+//apply plugin: 'ben_asm_fast_click'
+apply plugin: 'task_cost'
 
 
 
