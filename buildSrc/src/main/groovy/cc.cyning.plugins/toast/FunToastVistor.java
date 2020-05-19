@@ -5,7 +5,7 @@ import org.objectweb.asm.Opcodes;
 
 public class FunToastVistor extends MethodVisitor {
     public static final String  TOAST_CLASS = "android/widget/Toast";
-    public static final String   FIX_TOAST_CLASS = "cc/cyning/ben/FixToast";
+    public static final String   FIX_TOAST_CLASS = "cc/cyning/fixtoast/FixToast";
     public FunToastVistor(int api, MethodVisitor methodVisitor) {
         super(api, methodVisitor);
     }

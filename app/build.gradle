@@ -1,12 +1,10 @@
 apply plugin: 'com.android.application'
-apply plugin: 'ben_asm'
+apply plugin: 'ben_asm_fast_click'
+//apply plugin: 'task_cost'
 
 
 
-//cyMessage {
-//    message = 'hello '
-//    greeter = 'cyning'
-//}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
