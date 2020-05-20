@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'ben_asm_fast_click'
-apply plugin: 'task_cost'
+apply plugin: 'ben_asm_fast_click'
 
+apply plugin: 'task_cost'
 
 
 
@@ -51,12 +51,9 @@ buildscript {
 
         }
     }
-//    dependencies {
-//        //格式为-->group:module:version
-//        classpath 'cc.cyning.plugin:plugin:1.0.3'
-//    }
 }
 
-//cyning为resources/META-INF/gradle-plugins
-//下的properties文件名称
-
+taskExInfo{
+    duration 50
+    enable false
+}

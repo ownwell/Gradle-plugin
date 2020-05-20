@@ -12,9 +12,12 @@ import org.gradle.api.tasks.TaskState
 
 class TaskCoast : Plugin<Project> {
 
-    override fun apply(p0: Project) {
+    override fun apply(project: Project) {
+        project.extensions.create("taskExInfo", Cost::class.java)
+
+
         var map = HashMap<String, TaskInfo>()
-        p0.gradle.addListener(object : TaskExecutionListener {
+        project.gradle.addListener(object : TaskExecutionListener {
             var startTime: Long = 0
 
             init {
@@ -37,12 +40,19 @@ class TaskCoast : Plugin<Project> {
         })
 
 
-        p0.gradle.addBuildListener(object : BuildListener {
+        project.gradle.addBuildListener(object : BuildListener {
             override fun buildFinished(result: BuildResult) {
+                println()
+                println()
                 println("----------------------耗时-----------")
+                var taskExInfo = project.extensions.getByType(Cost::class.java)
                 map.forEach { key, value ->
-                    if (value.time >= 100L) {
-                        println("|  $key  ${value.time}")
+                    if (taskExInfo != null) {
+                        var dealLine: Int = taskExInfo.duration
+                        var enable = taskExInfo.enable
+                        if (enable && value.time >= dealLine) {
+                            println("|  $key  ${value.time}")
+                        }
                     }
 
 
@@ -67,3 +77,11 @@ class TaskCoast : Plugin<Project> {
 }
 
 data class TaskInfo(val path: String, val time: Long)
+
+open class Cost {
+    var duration = 0
+    var enable = false
+    fun duration(duration: Int) {
+        this.duration = duration
+    }
+}
