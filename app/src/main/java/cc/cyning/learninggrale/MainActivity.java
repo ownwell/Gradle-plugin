@@ -19,11 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.test).setOnClickListener(new View.OnClickListener() {
-            @Override
-            @Cy(id = 2009, msg = "true")
-
-            public void onClick(View v) {
-                try {
+                    @Override
+                    @Cy(id = 2009, msg = "true")
+                    public void onClick(View v) {
+                        try {
                     Thread.sleep(800);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -39,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         test();
+        // 7.1.1 badTokenException
         Toast.makeText(this, "dd", 100).show();
 
     }

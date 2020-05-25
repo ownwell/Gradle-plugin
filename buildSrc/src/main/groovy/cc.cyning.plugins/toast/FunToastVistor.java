@@ -30,9 +30,9 @@ public class FunToastVistor extends MethodVisitor {
                 desc = "(Landroid/content/Context;Ljava/lang/CharSequence;I)L"+FIX_TOAST_CLASS+";";
                 //方法描述符替换为影子方法
                 owner = FIX_TOAST_CLASS;
-                System.out.println("dfdfdfdfd");
+                System.out.println("dfdfdfdfd >>> " + desc);
             }
-            if(name.equals( "show")) {
+            if(name.equals( "show") && TOAST_CLASS.equals(owner)) {
                 owner = FIX_TOAST_CLASS;
             }
 

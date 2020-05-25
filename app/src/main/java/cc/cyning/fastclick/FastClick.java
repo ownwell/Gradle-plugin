@@ -12,6 +12,12 @@ public class FastClick {
      */
     private static int mLastClickViewId;
 
+    /**
+     * 是不是快速点击
+     * @param v
+     * @param intervalMillis
+     * @return
+     */
     public static boolean isFastDoubleClick(View v, long intervalMillis) {
         int viewId = v.getId();
         long time = System.currentTimeMillis();

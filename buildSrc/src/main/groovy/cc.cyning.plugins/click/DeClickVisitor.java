@@ -144,7 +144,6 @@ public class DeClickVisitor extends MethodVisitor {
             mv.visitInsn(RETURN);
             mv.visitLabel(label);
 
-            System.out.println("DeClickAdapter end \n");
             mIdValue = null;
         }
 

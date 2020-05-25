@@ -55,5 +55,5 @@ buildscript {
 
 taskExInfo{
     duration 50
-    enable false
+    enable true
 }
